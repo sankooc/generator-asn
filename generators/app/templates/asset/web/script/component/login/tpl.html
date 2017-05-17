@@ -1,0 +1,22 @@
+<div class="ui middle aligned center" style="display:flex;justify-content: center;margin: auto">
+  <div class="column" style="width:450px">
+    <form class="ui large form">
+      <div class="ui segment">
+        <div class="field">
+          <div class="ui left icon input">
+            <i class="user icon"></i>
+            <input type="text" name="email" placeholder="Phone Number" ng-model="cellphone">
+          </div>
+        </div>
+        <div class="field">
+          <div class="ui left icon input">
+            <i class="lock icon"></i>
+            <input type="password" name="password" placeholder="Password" ng-model="password">
+          </div>
+        </div>
+        <div class="ui fluid large teal submit button" ng-click="doLogin(cellphone, password)">Login</div>
+      </div>
+      <div class="ui error message"></div>
+    </form>
+  </div>
+</div>

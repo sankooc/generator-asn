@@ -1,0 +1,53 @@
+@ham-nav-height: 40px;
+@ham-footer-height: 30px;
+@ham-p-bkcolor: #3399CC;
+#hampshire-web-ui {
+  min-height: 100%;
+  background-color: #DADADA;
+  .ham-tab{
+    min-height:100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items:stretch;
+    justify-content: space-between;
+    >.menu.navigator {
+      height: @ham-nav-height;
+      margin-bottom: 0;
+    }
+    >.ham-content {
+      display:flex;
+      flex-direction: column;
+      flex: 1 1 auto;
+      .ham-home{
+        background-color: @ham-p-bkcolor;
+        width:100%;
+        flex: 1;
+      }
+      .ham-tab-content {
+        padding: 20px;
+      }
+    }
+    footer {
+      height: @ham-footer-height;
+      background-color: #eee;
+    }
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+   opacity: 0;
+ }
+ 100% {
+   opacity: 1;
+ }
+}
+@keyframes fadeOut {
+  0% {
+   opacity: 1;
+ }
+ 100% {
+   opacity: 0;
+ }
+}

@@ -1,0 +1,3 @@
+{
+  "ignore": ["build/*", "web/*", ".history/*",".vscode/*", "logs/*"]
+}

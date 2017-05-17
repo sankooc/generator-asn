@@ -1,0 +1,20 @@
+<div class="ham-tab">
+  <div class="ui menu navigator">
+    <div class="ui container menu" style="width: 100%">
+      <a class="item" ui-sref="tab.home">{{::name}}</a>
+      <div class="right menu" ng-if="!isLogin">
+        <a class="item" ui-sref="tab.register">注册</a>
+        <a class="item" ui-sref="tab.login">登录</a>
+      </div>
+      <div class="right menu" ng-if="isLogin">
+        <div class="ui dropdown item" sm-dropdown-bind="{action: 'hide'}">
+          <span class="text">{{current.cellphone}}</span>
+          <i class="dropdown icon"></i>
+          <sm-menu items="userMenu" label="item.label" icon="item.icon" children="item.children" divider="item.divider" on-click="stateChange(item, $event)"></sm-menu>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="container ham-content" ui-view></div>
+  <footer>footer</footer>
+</div>

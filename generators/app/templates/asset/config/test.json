@@ -1,11 +1,10 @@
 {
   "name": "asn",
   "mongodb": {
-    "host": "mongodb://localhost:27017/asn",
-    "user": "client"
+    "host": "mongodb://localhost:27017/test",
+    "user": "user"
   },
   "prefix": "/api",
-  "UPLOAD_FOLDER": "/tmp/uploads",
   "devPort": 4001,
   "salt": "asn",
   "port": 3001

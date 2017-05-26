@@ -2,7 +2,7 @@
   "name": "asn",
   "mongodb": {
     "host": "mongodb://localhost:27017/asn",
-    "user": "client"
+    "user": "user"
   },
   "prefix": "/api",
   "UPLOAD_FOLDER": "/tmp/uploads",

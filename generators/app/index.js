@@ -38,6 +38,11 @@ module.exports = class extends Generator {
       this.destinationPath('README.md'),
       this.props
     );
+    this.fs.copy(
+      this.templatePath('asset/.eslintrc.json'),
+      this.destinationPath('.eslintrc.json'),
+      this.props
+    );
   }
 
   install() {

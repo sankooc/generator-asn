@@ -33,6 +33,7 @@
     "react": "^15.4.1",
     "react-dom": "^15.4.1",
     "request": "^2.79.0",
+    "routs": "^1.0.2",
     "topsdk": "^1.0.6",
     "validatez": "1.0.4"
   },

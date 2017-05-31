@@ -2,10 +2,10 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const cookieParser = require('cookie-parser');
 const session = require('express-session');
-const mroute = require('./util/mroute');
+const mroute = require('routs');
 const rconfig = require('../config/router.js');
-const vconfig = require('../config/validator.js');
-const route = require('./route');
+const validators = require('../config/validator.js');
+const routes = require('./route');
 const filters = require('./midware/filter');
 const lang = require('../config/lang');
 const CError = require('./CError');
@@ -41,11 +41,10 @@ exports.create = (evn, version, config) => {
 
   app.enable('trust proxy');
 
-  mroute.express(app, rconfig, {
-    routes: route,
-    filters,
-    validators: vconfig,
-  });
+
+  const routsOption = { routes, filters, validators };
+
+  mroute.express(app, rconfig, routsOption);
 
   app.use((err, req, res, next) => {
     const type = typeof err;
